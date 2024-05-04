@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.contenedorP{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    /* background-color: aqua; */
+    width: 200px;
+    height: 316px;
+
+    .contenedor1{
+        grid-area: 1 / 1 / 2 / 2;
+        background-image: url(../assets/torre.png);
+        background-size: cover;
+    }
+
+    .contenedor2{
+        grid-area: 1 / 1 / 2 / 2;
+
+        .img{
+            background-image: url(../assets/gondola.png);
+            background-size: cover;
+            /* background-color: blue; */
+            height: 231px;
+
+        }
+    }
+}
+
+@keyframes rotacion {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.img {
+    animation: rotacion 3s linear infinite; 
+}
